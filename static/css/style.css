@@ -46,6 +46,9 @@ section {
     font-weight: bold;
     font-size: 30px;
     user-select: none;
+    cursor: pointer;
+
+
 }
 
 .next {
@@ -55,6 +58,7 @@ section {
 .slider__arrow:hover {
     background-color: rgba(0, 0, 0, 0.3);
     font-size: 50px;
+    outline: solid 2px grey;
 }
 
 

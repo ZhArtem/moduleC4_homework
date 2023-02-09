@@ -45,6 +45,27 @@ async function slider() {
 
     prevNode.addEventListener('click', () => { plusSlides(-1); });
     nextNode.addEventListener('click', () => { plusSlides(1); });
+    prevNode.addEventListener("keyup", function (event) {
+        if (event.key === "Enter") {
+            plusSlides(-1);
+        }
+    });
+    nextNode.addEventListener("keyup", function (event) {
+        if (event.key === "Enter") {
+            plusSlides(1);
+        }
+    });
+    document.addEventListener("keyup", function (event) {
+        if (event.key === "ArrowRight") {
+            plusSlides(1);
+        }
+    });
+    document.addEventListener("keyup", function (event) {
+        if (event.key === "ArrowLeft") {
+            plusSlides(-1);
+        }
+    });
+
 
     function plusSlides(n) {
         slideIndex += n;
